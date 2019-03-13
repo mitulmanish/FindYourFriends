@@ -1,5 +1,5 @@
 //
-//  DistanceCalculator.swift
+//  HaversineDistanceCalculator.swift
 //  DistanceCalculator
 //
 //  Created by Mitul Manish on 13/3/19.
@@ -7,8 +7,12 @@
 //
 import Foundation
 
-struct DistanceCalculator {
-    func haversineDistance(sourceLatitude: Double, sourceLongitude: Double, destinationLatitude: Double, destinationLongitude: Double, radius: Double = 6371000) -> Double {
+extension Double {
+    static let earthRadiusInMeters: Double = 6371000
+}
+
+struct HaversineDistanceCalculator: DistanceComputation {
+    func computeDistance(sourceLatitude: Double, sourceLongitude: Double, destinationLatitude: Double, destinationLongitude: Double) -> Double {
         
         let latitudeSourceInRadian = degreeToRadian(angle: sourceLatitude)
         let longitudeSourceInRadian = degreeToRadian(angle: sourceLongitude)
@@ -23,10 +27,7 @@ struct DistanceCalculator {
             return 2*asin(sqrt(angle))
         }
         
-        return radius * ahaversin(haversin(latitudeDestinationInRadian - latitudeSourceInRadian) + cos(latitudeSourceInRadian) * cos(latitudeDestinationInRadian) * haversin(longitudeDestinationInRadian - longitudeSourceInRadian))
-    }
-    
-    func degreeToRadian(angle: Double) -> Double {
-        return (angle / 360) * 2 * .pi
+        let distance = Double.earthRadiusInMeters * ahaversin(haversin(latitudeDestinationInRadian - latitudeSourceInRadian) + cos(latitudeSourceInRadian) * cos(latitudeDestinationInRadian) * haversin(longitudeDestinationInRadian - longitudeSourceInRadian))
+        return distance
     }
 }

@@ -10,23 +10,75 @@ import UIKit
 import CoreLocation
 class ViewController: UIViewController {
     
+    @IBOutlet weak var loadDataButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var progressLabel: UILabel!
+    
+    private var animator: UIViewControllerTransitioningDelegate?
+    
     private let headquartersLocation: LocationCoordinate = LocationCoordinate(latitude: 53.339428, longitude: -6.257664)
     private var customers: [Customer]?
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.isHidden = true
+        loadDataButton.addTarget(self, action: #selector(getCustomersFromFile), for: .touchUpInside)
+    }
+    
+    @objc fileprivate func getCustomersFromFile() {
         let dataProvider = GuestDataProvider(fileName: "customers")
         dataProvider.getData(resultQueue: .main, completionHandler: { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .loading:
-                break
+                self.progressLabel.text = "Loading ..."
+                self.activityIndicator.isHidden = false
+                self.activityIndicator.startAnimating()
             case .success(let customers):
+                self.progressLabel.text = nil
+                self.activityIndicator.stopAnimating()
                 self.customers = customers
+                self.loadDataButton.removeTarget(self, action: #selector(self.getCustomersFromFile), for: .touchUpInside)
+                self.loadDataButton.addTarget(self, action: #selector(self.showGuestList), for: .touchUpInside)
+                self.loadDataButton.setTitle("Show Guests", for: .normal)
             case .failure(let cause):
-                break
+                self.activityIndicator.stopAnimating()
+                self.progressLabel.text = cause?.localizedDescription ?? ""
             }
         })
+    }
+    
+    @objc func showGuestList() {
+        guard let customers = self.customers else {
+            return
+        }
+        let guests = VicinityCalculator(
+            sourceCoordinate: self.headquartersLocation,
+            customers: customers,
+            distanceCalculator: CLLocationDistanceCalculator())
+            .computeGuestList(within: 100.0)
+        animator = DraggableTransitionDelegate()
+        let resultsVC = ResultsViewController(guests: guests)
+        resultsVC.transitioningDelegate = animator
+        resultsVC.modalPresentationStyle = .custom
+        present(resultsVC, animated: true, completion: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
+import UIKit
+import Popper
+
+class DraggableTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return DraggablePresentationController(presentedViewController: presented, presenting: source)
     }
 }

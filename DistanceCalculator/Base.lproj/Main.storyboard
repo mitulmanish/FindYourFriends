@@ -18,18 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0H-SY-Xv8">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0H-SY-Xv8" customClass="CurvedButton" customModule="DistanceCalculator" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="313.5" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="36j-3W-qPm"/>
+                                    <constraint firstAttribute="height" constant="40" id="cgN-47-LtL"/>
+                                </constraints>
+                                <state key="normal" title="Load Customers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="N3A-Ed-97j">
+                                <rect key="frame" x="177.5" y="369.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUo-7r-Z2Z">
+                                <rect key="frame" x="187.5" y="397.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FUo-7r-Z2Z" firstAttribute="centerX" secondItem="N3A-Ed-97j" secondAttribute="centerX" id="Hmk-wL-qzb"/>
+                            <constraint firstItem="FUo-7r-Z2Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZGo-aa-JBz"/>
+                            <constraint firstItem="N3A-Ed-97j" firstAttribute="top" secondItem="Q0H-SY-Xv8" secondAttribute="bottom" constant="16" id="Zgo-T3-rKB"/>
+                            <constraint firstItem="N3A-Ed-97j" firstAttribute="centerX" secondItem="Q0H-SY-Xv8" secondAttribute="centerX" id="aeu-vP-vdT"/>
+                            <constraint firstItem="Q0H-SY-Xv8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ecH-52-MUy"/>
+                            <constraint firstItem="Q0H-SY-Xv8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jf5-rJ-Yfd"/>
+                            <constraint firstItem="FUo-7r-Z2Z" firstAttribute="top" secondItem="N3A-Ed-97j" secondAttribute="bottom" constant="8" id="nRe-F3-hLV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FUo-7r-Z2Z" secondAttribute="trailing" id="t5q-7Y-Mfz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="N3A-Ed-97j" id="DbQ-uh-cGC"/>
+                        <outlet property="loadDataButton" destination="Q0H-SY-Xv8" id="RC2-eW-VVU"/>
+                        <outlet property="progressLabel" destination="FUo-7r-Z2Z" id="pYc-di-14V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="52" y="103.89805097451276"/>
         </scene>
     </scenes>
 </document>

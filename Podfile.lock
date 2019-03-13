@@ -1,0 +1,16 @@
+PODS:
+  - Popper (1.0.0)
+
+DEPENDENCIES:
+  - Popper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Popper
+
+SPEC CHECKSUMS:
+  Popper: 6054fc76543d757bc0d4399ac04c7c891ee2f8e2
+
+PODFILE CHECKSUM: b25c6ea15733c1d74b750a2db5eeacd212a190b0
+
+COCOAPODS: 1.6.1

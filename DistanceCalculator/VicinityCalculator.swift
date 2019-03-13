@@ -11,10 +11,11 @@ import Foundation
 struct VicinityCalculator {
     let sourceCoordinate: LocationCoordinate
     let customers: [Customer]
+    let distanceCalculator: DistanceComputation
     
     func computeGuestList(within radiusInKm: Double) -> [Customer] {
         return customers.filter({ customer in
-            let distanceInMeters = DistanceCalculator().haversineDistance(
+            let distanceInMeters = distanceCalculator.computeDistance(
                 sourceLatitude: customer.latitude,
                 sourceLongitude: customer.longitude,
                 destinationLatitude: sourceCoordinate.latitude,
