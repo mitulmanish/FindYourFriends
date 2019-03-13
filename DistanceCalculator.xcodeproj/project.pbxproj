@@ -12,8 +12,22 @@
 		DD1C39CA22374D880082E860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39C822374D880082E860 /* Main.storyboard */; };
 		DD1C39CC22374D8B0082E860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39CB22374D8B0082E860 /* Assets.xcassets */; };
 		DD1C39CF22374D8B0082E860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39CD22374D8B0082E860 /* LaunchScreen.storyboard */; };
-		DD1C39DA22374D8B0082E860 /* DistanceCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39D922374D8B0082E860 /* DistanceCalculatorTests.swift */; };
+		DD1C39DA22374D8B0082E860 /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39D922374D8B0082E860 /* FileReaderTests.swift */; };
 		DD1C39E522374D8B0082E860 /* DistanceCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39E422374D8B0082E860 /* DistanceCalculatorUITests.swift */; };
+		DD1C39F522374E340082E860 /* customers.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39F422374E340082E860 /* customers.txt */; };
+		DD1C39F722374F250082E860 /* DummyToGetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39F622374F240082E860 /* DummyToGetBundle.swift */; };
+		DD1C39FA22377DB50082E860 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39F822375D630082E860 /* FileReader.swift */; };
+		DD1C39FC22377E140082E860 /* customers.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39FB22377E140082E860 /* customers.txt */; };
+		DD1C39FE223799180082E860 /* emptyCustomers.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39FD223799180082E860 /* emptyCustomers.txt */; };
+		DD1C3A0022379CB70082E860 /* customersWithBlankLines.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39FF22379CB70082E860 /* customersWithBlankLines.txt */; };
+		DD1C3A022237A1060082E860 /* customersWithIllegalCharacters.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD1C3A012237A1060082E860 /* customersWithIllegalCharacters.txt */; };
+		DD1C3A07223892460082E860 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A06223892460082E860 /* Customer.swift */; };
+		DD1C3A09223893760082E860 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A08223893760082E860 /* DistanceCalculator.swift */; };
+		DD1C3A0B223894130082E860 /* GuestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A0A223894130082E860 /* GuestDataProvider.swift */; };
+		DD1C3A0D2238E9AF0082E860 /* GuestDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A0C2238E9AF0082E860 /* GuestDataProviderTests.swift */; };
+		DD1C3A0F2238F0FD0082E860 /* customerDataWithMissingKeys.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD1C3A0E2238F0FD0082E860 /* customerDataWithMissingKeys.txt */; };
+		DD1C3A112238FC660082E860 /* LocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A102238FC660082E860 /* LocationCoordinate.swift */; };
+		DD1C3A132238FC8C0082E860 /* VicinityCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A122238FC8C0082E860 /* VicinityCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +56,25 @@
 		DD1C39CE22374D8B0082E860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1C39D022374D8B0082E860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1C39D522374D8B0082E860 /* DistanceCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistanceCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD1C39D922374D8B0082E860 /* DistanceCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculatorTests.swift; sourceTree = "<group>"; };
+		DD1C39D922374D8B0082E860 /* FileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
 		DD1C39DB22374D8B0082E860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1C39E022374D8B0082E860 /* DistanceCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistanceCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1C39E422374D8B0082E860 /* DistanceCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculatorUITests.swift; sourceTree = "<group>"; };
 		DD1C39E622374D8B0082E860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD1C39F422374E340082E860 /* customers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customers.txt; sourceTree = "<group>"; };
+		DD1C39F622374F240082E860 /* DummyToGetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyToGetBundle.swift; sourceTree = "<group>"; };
+		DD1C39F822375D630082E860 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		DD1C39FB22377E140082E860 /* customers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customers.txt; sourceTree = "<group>"; };
+		DD1C39FD223799180082E860 /* emptyCustomers.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = emptyCustomers.txt; sourceTree = "<group>"; };
+		DD1C39FF22379CB70082E860 /* customersWithBlankLines.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = customersWithBlankLines.txt; sourceTree = "<group>"; };
+		DD1C3A012237A1060082E860 /* customersWithIllegalCharacters.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = customersWithIllegalCharacters.txt; sourceTree = "<group>"; };
+		DD1C3A06223892460082E860 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		DD1C3A08223893760082E860 /* DistanceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
+		DD1C3A0A223894130082E860 /* GuestDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDataProvider.swift; sourceTree = "<group>"; };
+		DD1C3A0C2238E9AF0082E860 /* GuestDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDataProviderTests.swift; sourceTree = "<group>"; };
+		DD1C3A0E2238F0FD0082E860 /* customerDataWithMissingKeys.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = customerDataWithMissingKeys.txt; sourceTree = "<group>"; };
+		DD1C3A102238FC660082E860 /* LocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinate.swift; sourceTree = "<group>"; };
+		DD1C3A122238FC8C0082E860 /* VicinityCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VicinityCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +125,19 @@
 		DD1C39C322374D880082E860 /* DistanceCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				DD1C39F822375D630082E860 /* FileReader.swift */,
+				DD1C39FB22377E140082E860 /* customers.txt */,
 				DD1C39C422374D880082E860 /* AppDelegate.swift */,
 				DD1C39C622374D880082E860 /* ViewController.swift */,
 				DD1C39C822374D880082E860 /* Main.storyboard */,
 				DD1C39CB22374D8B0082E860 /* Assets.xcassets */,
 				DD1C39CD22374D8B0082E860 /* LaunchScreen.storyboard */,
 				DD1C39D022374D8B0082E860 /* Info.plist */,
+				DD1C3A06223892460082E860 /* Customer.swift */,
+				DD1C3A08223893760082E860 /* DistanceCalculator.swift */,
+				DD1C3A0A223894130082E860 /* GuestDataProvider.swift */,
+				DD1C3A102238FC660082E860 /* LocationCoordinate.swift */,
+				DD1C3A122238FC8C0082E860 /* VicinityCalculator.swift */,
 			);
 			path = DistanceCalculator;
 			sourceTree = "<group>";
@@ -110,8 +145,11 @@
 		DD1C39D822374D8B0082E860 /* DistanceCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				DD1C39D922374D8B0082E860 /* DistanceCalculatorTests.swift */,
 				DD1C39DB22374D8B0082E860 /* Info.plist */,
+				DD1C3A052237B94B0082E860 /* CustomerData */,
+				DD1C39D922374D8B0082E860 /* FileReaderTests.swift */,
+				DD1C3A0C2238E9AF0082E860 /* GuestDataProviderTests.swift */,
+				DD1C39F622374F240082E860 /* DummyToGetBundle.swift */,
 			);
 			path = DistanceCalculatorTests;
 			sourceTree = "<group>";
@@ -123,6 +161,18 @@
 				DD1C39E622374D8B0082E860 /* Info.plist */,
 			);
 			path = DistanceCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		DD1C3A052237B94B0082E860 /* CustomerData */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C39F422374E340082E860 /* customers.txt */,
+				DD1C39FD223799180082E860 /* emptyCustomers.txt */,
+				DD1C39FF22379CB70082E860 /* customersWithBlankLines.txt */,
+				DD1C3A012237A1060082E860 /* customersWithIllegalCharacters.txt */,
+				DD1C3A0E2238F0FD0082E860 /* customerDataWithMissingKeys.txt */,
+			);
+			path = CustomerData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1C39FC22377E140082E860 /* customers.txt in Resources */,
 				DD1C39CF22374D8B0082E860 /* LaunchScreen.storyboard in Resources */,
 				DD1C39CC22374D8B0082E860 /* Assets.xcassets in Resources */,
 				DD1C39CA22374D880082E860 /* Main.storyboard in Resources */,
@@ -239,6 +290,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1C39FE223799180082E860 /* emptyCustomers.txt in Resources */,
+				DD1C3A0F2238F0FD0082E860 /* customerDataWithMissingKeys.txt in Resources */,
+				DD1C39F522374E340082E860 /* customers.txt in Resources */,
+				DD1C3A0022379CB70082E860 /* customersWithBlankLines.txt in Resources */,
+				DD1C3A022237A1060082E860 /* customersWithIllegalCharacters.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1C3A09223893760082E860 /* DistanceCalculator.swift in Sources */,
+				DD1C39FA22377DB50082E860 /* FileReader.swift in Sources */,
 				DD1C39C722374D880082E860 /* ViewController.swift in Sources */,
+				DD1C3A0B223894130082E860 /* GuestDataProvider.swift in Sources */,
+				DD1C3A132238FC8C0082E860 /* VicinityCalculator.swift in Sources */,
+				DD1C3A07223892460082E860 /* Customer.swift in Sources */,
 				DD1C39C522374D880082E860 /* AppDelegate.swift in Sources */,
+				DD1C3A112238FC660082E860 /* LocationCoordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD1C39DA22374D8B0082E860 /* DistanceCalculatorTests.swift in Sources */,
+				DD1C39F722374F250082E860 /* DummyToGetBundle.swift in Sources */,
+				DD1C3A0D2238E9AF0082E860 /* GuestDataProviderTests.swift in Sources */,
+				DD1C39DA22374D8B0082E860 /* FileReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

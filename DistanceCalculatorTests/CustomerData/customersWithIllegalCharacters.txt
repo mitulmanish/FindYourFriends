@@ -1,0 +1,15 @@
+x
+{"latitude": "52.986375", "user_id": 12, "name": "Christina McArdle", "longitude": "-6.043701"}
+something
+{"latitude": "51.92893", "user_id": 1, "name": "Alice Cahill", "longitude": "-10.27699"}
+somethingElse
+abcd
+{"latitude": "53.807778", "user_id": 28, "name": "Charlie Halligan", "longitude": "-7.714444"}
+{"latitude": "53.4692815", "user_id": 7, "name": "Frank Kehoe", "longitude": "-9.436036"}
+1234
+{"latitude": "53", "user_id": 13, "name": "Olive Ahearn", "longitude": "-7"}
+xyz
+mnop
+abcdef
+{"latitude": "52.833502", "user_id": 25, "name": "David Behan", "longitude": "-8.522366"}
+&^%$^&
