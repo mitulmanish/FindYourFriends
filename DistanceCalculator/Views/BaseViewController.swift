@@ -78,6 +78,10 @@ class BaseViewController: UIViewController {
             distanceCalculator: HaversineDistanceCalculator())
             .computeGuestList(within: 100.0
         )
+        guard guests.isEmpty == false else {
+            progressLabel.text = "No guests found within \(100) Km"
+            return
+        }
         animator = DraggableTransitionDelegate()
         let resultsVC = ResultsViewController(guests: guests)
         resultsVC.transitioningDelegate = animator
