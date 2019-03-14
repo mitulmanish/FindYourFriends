@@ -32,7 +32,7 @@ struct GuestDataProvider {
             case (_, let error?):
                 completionHandler(.failure(cause: error))
             case (.none, .none):
-                completionHandler(.failure(cause: nil))
+                completionHandler(.failure(cause: .none))
             }
         }
     }

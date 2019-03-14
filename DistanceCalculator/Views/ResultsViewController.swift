@@ -72,6 +72,7 @@ class ResultsViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return guests.count
@@ -85,6 +86,7 @@ extension ResultsViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

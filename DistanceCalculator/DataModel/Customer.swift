@@ -32,10 +32,12 @@ extension Customer {
         guard let userID = dictionary[Keys.userID.rawValue] as? Int else {
             throw SerializationError.missing(key: Keys.userID.rawValue)
         }
-        guard let latitudeAsString = dictionary[Keys.latitude.rawValue] as? String, let latitudeAsDouble = Double(latitudeAsString) else {
+        guard let latitudeAsString = dictionary[Keys.latitude.rawValue] as? String,
+            let latitudeAsDouble = Double(latitudeAsString) else {
             throw SerializationError.missing(key: Keys.latitude.rawValue)
         }
-        guard let longitudeAsString = dictionary[Keys.longitude.rawValue] as? String, let longitudeAsDouble = Double(longitudeAsString) else {
+        guard let longitudeAsString = dictionary[Keys.longitude.rawValue] as? String,
+            let longitudeAsDouble = Double(longitudeAsString) else {
             throw SerializationError.missing(key: Keys.longitude.rawValue)
         }
         self.name = name

@@ -275,8 +275,8 @@
 				DD1C3A052237B94B0082E860 /* CustomerData */,
 				DD1C39D922374D8B0082E860 /* FileReaderTests.swift */,
 				DD1C3A0C2238E9AF0082E860 /* GuestDataProviderTests.swift */,
-				DD1C39F622374F240082E860 /* DummyToGetBundle.swift */,
 				DD0A0411223A1C3400166137 /* VicinityCalculatorTests.swift */,
+				DD1C39F622374F240082E860 /* DummyToGetBundle.swift */,
 			);
 			path = DistanceCalculatorTests;
 			sourceTree = "<group>";

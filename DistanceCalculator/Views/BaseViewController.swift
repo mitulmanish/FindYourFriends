@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreLocation
+
 class BaseViewController: UIViewController {
     
     @IBOutlet weak var loadDataButton: UIButton!
@@ -15,8 +15,10 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     
     private var animator: UIViewControllerTransitioningDelegate?
-    
-    private let headquartersLocation: LocationCoordinate = LocationCoordinate(latitude: 53.339428, longitude: -6.257664)
+    private let headquartersLocation: LocationCoordinate = LocationCoordinate(
+        latitude: 53.339428,
+        longitude: -6.257664
+    )
     private var customers: [Customer]?
     
     override func viewDidLoad() {
@@ -45,11 +47,19 @@ class BaseViewController: UIViewController {
                 self.activityIndicator.isHidden = false
                 self.activityIndicator.startAnimating()
             case .success(let customers):
-                self.progressLabel.text = nil
+                self.progressLabel.text = .none
                 self.activityIndicator.stopAnimating()
                 self.customers = customers
-                self.loadDataButton.removeTarget(self, action: #selector(self.getCustomersFromFile), for: .touchUpInside)
-                self.loadDataButton.addTarget(self, action: #selector(self.showGuestList), for: .touchUpInside)
+                self.loadDataButton.removeTarget(
+                    self,
+                    action: #selector(self.getCustomersFromFile),
+                    for: .touchUpInside
+                )
+                self.loadDataButton.addTarget(
+                    self,
+                    action: #selector(self.showGuestList),
+                    for: .touchUpInside
+                )
                 self.loadDataButton.setTitle("Show Guests", for: .normal)
             case .failure(let cause):
                 self.activityIndicator.stopAnimating()
@@ -66,11 +76,12 @@ class BaseViewController: UIViewController {
             sourceCoordinate: self.headquartersLocation,
             customers: customers,
             distanceCalculator: HaversineDistanceCalculator())
-            .computeGuestList(within: 100.0)
+            .computeGuestList(within: 100.0
+        )
         animator = DraggableTransitionDelegate()
         let resultsVC = ResultsViewController(guests: guests)
         resultsVC.transitioningDelegate = animator
         resultsVC.modalPresentationStyle = .custom
-        present(resultsVC, animated: true, completion: nil)
+        present(resultsVC, animated: true, completion: .none)
     }
 }
