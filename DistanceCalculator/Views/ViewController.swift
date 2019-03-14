@@ -21,9 +21,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressLabel.text = ""
         activityIndicator.hidesWhenStopped = true
         activityIndicator.isHidden = true
         loadDataButton.addTarget(self, action: #selector(getCustomersFromFile), for: .touchUpInside)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @objc fileprivate func getCustomersFromFile() {
@@ -44,7 +53,7 @@ class ViewController: UIViewController {
                 self.loadDataButton.setTitle("Show Guests", for: .normal)
             case .failure(let cause):
                 self.activityIndicator.stopAnimating()
-                self.progressLabel.text = cause?.localizedDescription ?? ""
+                self.progressLabel.text = cause?.description ?? ""
             }
         })
     }
@@ -56,29 +65,12 @@ class ViewController: UIViewController {
         let guests = VicinityCalculator(
             sourceCoordinate: self.headquartersLocation,
             customers: customers,
-            distanceCalculator: CLLocationDistanceCalculator())
+            distanceCalculator: HaversineDistanceCalculator())
             .computeGuestList(within: 100.0)
         animator = DraggableTransitionDelegate()
         let resultsVC = ResultsViewController(guests: guests)
         resultsVC.transitioningDelegate = animator
         resultsVC.modalPresentationStyle = .custom
         present(resultsVC, animated: true, completion: nil)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-}
-
-import UIKit
-import Popper
-
-class DraggableTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return DraggablePresentationController(presentedViewController: presented, presenting: source)
     }
 }

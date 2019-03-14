@@ -13,6 +13,19 @@ enum FileReadError: Error, Equatable {
     case cannotCreateFileHandler
     case fileHandlerNotAvailable
     case alreadyReachedEndOfFile
+    
+    var description: String {
+        switch self {
+        case .encodingError(let string):
+            return "This delimiter \(string) is not suitable"
+        case .alreadyReachedEndOfFile:
+            return ""
+        case .cannotCreateFileHandler:
+            return "Can't read this file, please make sure file name is correct"
+        default:
+            return "Encountered error while reading the file"
+        }
+    }
 }
 
 class FileReader {

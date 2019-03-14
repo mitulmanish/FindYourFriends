@@ -32,8 +32,8 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="N3A-Ed-97j">
                                 <rect key="frame" x="177.5" y="369.5" width="20" height="20"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUo-7r-Z2Z">
-                                <rect key="frame" x="187.5" y="397.5" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUo-7r-Z2Z">
+                                <rect key="frame" x="16" y="397.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -41,7 +41,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FUo-7r-Z2Z" secondAttribute="trailing" constant="16" id="3Bu-Ps-Q8a"/>
                             <constraint firstItem="FUo-7r-Z2Z" firstAttribute="centerX" secondItem="N3A-Ed-97j" secondAttribute="centerX" id="Hmk-wL-qzb"/>
+                            <constraint firstItem="FUo-7r-Z2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UnR-Gv-TU2"/>
                             <constraint firstItem="FUo-7r-Z2Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZGo-aa-JBz"/>
                             <constraint firstItem="N3A-Ed-97j" firstAttribute="top" secondItem="Q0H-SY-Xv8" secondAttribute="bottom" constant="16" id="Zgo-T3-rKB"/>
                             <constraint firstItem="N3A-Ed-97j" firstAttribute="centerX" secondItem="Q0H-SY-Xv8" secondAttribute="centerX" id="aeu-vP-vdT"/>

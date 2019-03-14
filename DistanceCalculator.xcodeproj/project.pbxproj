@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0FA6D7B33352309264F6F3D6 /* Pods_DistanceCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE02ED54BF14541E1F21E90 /* Pods_DistanceCalculator.framework */; };
 		AEE4C164CC5B858AA1D511AD /* Pods_DistanceCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E135DA5194839F5424E0F3FD /* Pods_DistanceCalculatorTests.framework */; };
+		DD0A0404223A023700166137 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0403223A023700166137 /* Guest.swift */; };
+		DD0A0406223A02DE00166137 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0405223A02DE00166137 /* CustomTableViewCell.swift */; };
+		DD0A0408223A02FF00166137 /* ResultsViewController+DraggableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0407223A02FF00166137 /* ResultsViewController+DraggableViewType.swift */; };
 		DD1C39C522374D880082E860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39C422374D880082E860 /* AppDelegate.swift */; };
 		DD1C39C722374D880082E860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39C622374D880082E860 /* ViewController.swift */; };
 		DD1C39CA22374D880082E860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39C822374D880082E860 /* Main.storyboard */; };
@@ -36,6 +39,7 @@
 		DD1C3A1B2239430D0082E860 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1C3A192239430D0082E860 /* ResultsViewController.xib */; };
 		DD1C3A1D2239546E0082E860 /* UIViiew+roundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A1C2239546E0082E860 /* UIViiew+roundedCorners.swift */; };
 		DD1C3A1F223954AE0082E860 /* CurvedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A1E223954AE0082E860 /* CurvedButton.swift */; };
+		DD1C3A21223959390082E860 /* DraggableTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C3A20223959390082E860 /* DraggableTransitionDelegate.swift */; };
 		F04FB0381E9ACE5BBF648903 /* Pods_DistanceCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5223FB7599BC2F7BB1E9424B /* Pods_DistanceCalculatorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,9 @@
 		C5CE0256E0D9C92CBFB2D2E5 /* Pods-DistanceCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistanceCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-DistanceCalculatorUITests/Pods-DistanceCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBE02ED54BF14541E1F21E90 /* Pods_DistanceCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistanceCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A0E69D8F90B9F0AA5AC10E /* Pods-DistanceCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistanceCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-DistanceCalculatorTests/Pods-DistanceCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD0A0403223A023700166137 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		DD0A0405223A02DE00166137 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		DD0A0407223A02FF00166137 /* ResultsViewController+DraggableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultsViewController+DraggableViewType.swift"; sourceTree = "<group>"; };
 		DD1C39C122374D880082E860 /* DistanceCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1C39C422374D880082E860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD1C39C622374D880082E860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +105,7 @@
 		DD1C3A192239430D0082E860 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		DD1C3A1C2239546E0082E860 /* UIViiew+roundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViiew+roundedCorners.swift"; sourceTree = "<group>"; };
 		DD1C3A1E223954AE0082E860 /* CurvedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedButton.swift; sourceTree = "<group>"; };
+		DD1C3A20223959390082E860 /* DraggableTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableTransitionDelegate.swift; sourceTree = "<group>"; };
 		E135DA5194839F5424E0F3FD /* Pods_DistanceCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistanceCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +150,81 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DD0A0409223A035800166137 /* DistanceCalculation */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C3A122238FC8C0082E860 /* VicinityCalculator.swift */,
+				DD1C3A08223893760082E860 /* HaversineDistanceCalculator.swift */,
+				DD1C3A16223937D00082E860 /* CLLocationDistanceCalculator.swift */,
+				DD1C3A14223937B00082E860 /* DistanceComputation.swift */,
+			);
+			path = DistanceCalculation;
+			sourceTree = "<group>";
+		};
+		DD0A040A223A037800166137 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C3A102238FC660082E860 /* LocationCoordinate.swift */,
+				DD1C3A06223892460082E860 /* Customer.swift */,
+				DD0A0403223A023700166137 /* Guest.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		DD0A040B223A03F500166137 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C3A0A223894130082E860 /* GuestDataProvider.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DD0A040C223A042800166137 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C3A1C2239546E0082E860 /* UIViiew+roundedCorners.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD0A040D223A043900166137 /* CustomPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A0407223A02FF00166137 /* ResultsViewController+DraggableViewType.swift */,
+				DD1C3A20223959390082E860 /* DraggableTransitionDelegate.swift */,
+			);
+			path = CustomPresentation;
+			sourceTree = "<group>";
+		};
+		DD0A040E223A045800166137 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C39C822374D880082E860 /* Main.storyboard */,
+				DD1C3A192239430D0082E860 /* ResultsViewController.xib */,
+				DD1C39C622374D880082E860 /* ViewController.swift */,
+				DD1C3A182239430D0082E860 /* ResultsViewController.swift */,
+				DD1C3A1E223954AE0082E860 /* CurvedButton.swift */,
+				DD0A0405223A02DE00166137 /* CustomTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD0A040F223A046B00166137 /* CustomerData */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C39FB22377E140082E860 /* customers.txt */,
+			);
+			path = CustomerData;
+			sourceTree = "<group>";
+		};
+		DD0A0410223A04B200166137 /* TextFileReader */ = {
+			isa = PBXGroup;
+			children = (
+				DD1C39F822375D630082E860 /* FileReader.swift */,
+			);
+			path = TextFileReader;
+			sourceTree = "<group>";
+		};
 		DD1C39B822374D880082E860 = {
 			isa = PBXGroup;
 			children = (
@@ -167,25 +250,18 @@
 		DD1C39C322374D880082E860 /* DistanceCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				DD1C39F822375D630082E860 /* FileReader.swift */,
-				DD1C39FB22377E140082E860 /* customers.txt */,
+				DD0A0410223A04B200166137 /* TextFileReader */,
+				DD0A040F223A046B00166137 /* CustomerData */,
 				DD1C39C422374D880082E860 /* AppDelegate.swift */,
-				DD1C39C622374D880082E860 /* ViewController.swift */,
-				DD1C39C822374D880082E860 /* Main.storyboard */,
+				DD0A040E223A045800166137 /* Views */,
 				DD1C39CB22374D8B0082E860 /* Assets.xcassets */,
 				DD1C39CD22374D8B0082E860 /* LaunchScreen.storyboard */,
 				DD1C39D022374D8B0082E860 /* Info.plist */,
-				DD1C3A06223892460082E860 /* Customer.swift */,
-				DD1C3A08223893760082E860 /* HaversineDistanceCalculator.swift */,
-				DD1C3A0A223894130082E860 /* GuestDataProvider.swift */,
-				DD1C3A102238FC660082E860 /* LocationCoordinate.swift */,
-				DD1C3A122238FC8C0082E860 /* VicinityCalculator.swift */,
-				DD1C3A14223937B00082E860 /* DistanceComputation.swift */,
-				DD1C3A16223937D00082E860 /* CLLocationDistanceCalculator.swift */,
-				DD1C3A182239430D0082E860 /* ResultsViewController.swift */,
-				DD1C3A192239430D0082E860 /* ResultsViewController.xib */,
-				DD1C3A1C2239546E0082E860 /* UIViiew+roundedCorners.swift */,
-				DD1C3A1E223954AE0082E860 /* CurvedButton.swift */,
+				DD0A040A223A037800166137 /* DataModel */,
+				DD0A0409223A035800166137 /* DistanceCalculation */,
+				DD0A040B223A03F500166137 /* Presenter */,
+				DD0A040C223A042800166137 /* Extensions */,
+				DD0A040D223A043900166137 /* CustomPresentation */,
 			);
 			path = DistanceCalculator;
 			sourceTree = "<group>";
@@ -467,10 +543,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD1C3A1A2239430D0082E860 /* ResultsViewController.swift in Sources */,
+				DD0A0408223A02FF00166137 /* ResultsViewController+DraggableViewType.swift in Sources */,
 				DD1C3A09223893760082E860 /* HaversineDistanceCalculator.swift in Sources */,
+				DD0A0406223A02DE00166137 /* CustomTableViewCell.swift in Sources */,
 				DD1C39FA22377DB50082E860 /* FileReader.swift in Sources */,
 				DD1C39C722374D880082E860 /* ViewController.swift in Sources */,
 				DD1C3A0B223894130082E860 /* GuestDataProvider.swift in Sources */,
+				DD0A0404223A023700166137 /* Guest.swift in Sources */,
 				DD1C3A132238FC8C0082E860 /* VicinityCalculator.swift in Sources */,
 				DD1C3A15223937B00082E860 /* DistanceComputation.swift in Sources */,
 				DD1C3A07223892460082E860 /* Customer.swift in Sources */,
@@ -479,6 +558,7 @@
 				DD1C3A1F223954AE0082E860 /* CurvedButton.swift in Sources */,
 				DD1C3A17223937D00082E860 /* CLLocationDistanceCalculator.swift in Sources */,
 				DD1C3A112238FC660082E860 /* LocationCoordinate.swift in Sources */,
+				DD1C3A21223959390082E860 /* DraggableTransitionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

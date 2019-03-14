@@ -13,8 +13,8 @@ struct VicinityCalculator {
     let customers: [Customer]
     let distanceCalculator: DistanceComputation
     
-    func computeGuestList(within radiusInKm: Double) -> [Customer] {
-        return customers.filter({ customer in
+    func computeGuestList(within radiusInKm: Double) -> [Guest] {
+        return customers.map { customer -> Guest in
             let distanceInMeters = distanceCalculator.computeDistance(
                 sourceLatitude: customer.latitude,
                 sourceLongitude: customer.longitude,
@@ -25,7 +25,13 @@ struct VicinityCalculator {
                 value: distanceInMeters,
                 unit: UnitLength.meters
                 ).converted(to: UnitLength.kilometers).value
-            return distanceinKm <= radiusInKm
-        }).sorted(by: { $0.userID < $1.userID })
+            return Guest(
+                userID: customer.userID,
+                userName: customer.name,
+                distanceFromSourceInKm: distanceinKm
+            )
+            }.filter { guest in
+                guest.distanceFromSourceInKm <= radiusInKm
+            }.sorted { $0.userID < $1.userID }
     }
 }

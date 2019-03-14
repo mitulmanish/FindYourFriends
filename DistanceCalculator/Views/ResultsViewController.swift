@@ -24,9 +24,9 @@ class ResultsViewController: UIViewController {
         return tableView
     }()
     
-    private let guests: [Customer]
+    private let guests: [Guest]
     
-    init(guests: [Customer]) {
+    init(guests: [Guest]) {
         self.guests = guests
         super.init(nibName: nil, bundle: .main)
     }
@@ -38,18 +38,20 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
-        view.addSubview(handlerView)
-        [handlerView.heightAnchor.constraint(equalToConstant: 4),
-         handlerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-         handlerView.widthAnchor.constraint(equalToConstant: 90),
-         handlerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8)
-            ].forEach { $0.isActive = true }
-        
+        setupHandlerView()
+        setupTableView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        view.round(corners: [.topLeft, .topRight], radius: 8)
+    }
+    
+    private func setupTableView() {
         view.addSubview(tableView)
         [tableView.topAnchor.constraint(equalTo: handlerView.bottomAnchor, constant: 16),
-        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-        tableView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1)
+         tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+         tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+         tableView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1)
             ].forEach { $0.isActive = true }
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: view.bounds.height / 3.0, right: 0)
         tableView.separatorStyle = .singleLine
@@ -60,8 +62,13 @@ class ResultsViewController: UIViewController {
         tableView.delegate = self
     }
     
-    override func viewDidLayoutSubviews() {
-        view.round(corners: [.topLeft, .topRight], radius: 8)
+    private func setupHandlerView() {
+        view.addSubview(handlerView)
+        [handlerView.heightAnchor.constraint(equalToConstant: 4),
+         handlerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+         handlerView.widthAnchor.constraint(equalToConstant: 90),
+         handlerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8)
+            ].forEach { $0.isActive = true }
     }
 }
 
@@ -86,31 +93,6 @@ extension ResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let guest = guests[indexPath.item]
-        cell.textLabel?.text = "\(guest.userID) \(guest.name)"
+        cell.textLabel?.text = "\(guest.userID). \(guest.userName)  - \(guest.distanceFromSourceDescription)"
     }
-}
-
-class CustomTableViewCell: UITableViewCell {
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        textLabel?.textColor = .white
-        contentView.backgroundColor = .gray
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension ResultsViewController: DraggableViewType {
-    
-    var scrollView: UIScrollView {
-        return tableView
-    }
-    
-    func handleInteraction(enabled: Bool) {
-        tableView.isUserInteractionEnabled = enabled
-    }
-    
-    func dismissKeyboard() {}
 }
