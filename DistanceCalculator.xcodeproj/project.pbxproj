@@ -12,8 +12,9 @@
 		DD0A0404223A023700166137 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0403223A023700166137 /* Guest.swift */; };
 		DD0A0406223A02DE00166137 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0405223A02DE00166137 /* CustomTableViewCell.swift */; };
 		DD0A0408223A02FF00166137 /* ResultsViewController+DraggableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0407223A02FF00166137 /* ResultsViewController+DraggableViewType.swift */; };
+		DD0A0412223A1C3400166137 /* VicinityCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A0411223A1C3400166137 /* VicinityCalculatorTests.swift */; };
 		DD1C39C522374D880082E860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39C422374D880082E860 /* AppDelegate.swift */; };
-		DD1C39C722374D880082E860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39C622374D880082E860 /* ViewController.swift */; };
+		DD1C39C722374D880082E860 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C39C622374D880082E860 /* BaseViewController.swift */; };
 		DD1C39CA22374D880082E860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39C822374D880082E860 /* Main.storyboard */; };
 		DD1C39CC22374D8B0082E860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39CB22374D8B0082E860 /* Assets.xcassets */; };
 		DD1C39CF22374D8B0082E860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C39CD22374D8B0082E860 /* LaunchScreen.storyboard */; };
@@ -72,9 +73,10 @@
 		DD0A0403223A023700166137 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		DD0A0405223A02DE00166137 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		DD0A0407223A02FF00166137 /* ResultsViewController+DraggableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultsViewController+DraggableViewType.swift"; sourceTree = "<group>"; };
+		DD0A0411223A1C3400166137 /* VicinityCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VicinityCalculatorTests.swift; sourceTree = "<group>"; };
 		DD1C39C122374D880082E860 /* DistanceCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1C39C422374D880082E860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD1C39C622374D880082E860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD1C39C622374D880082E860 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DD1C39C922374D880082E860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD1C39CB22374D8B0082E860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1C39CE22374D8B0082E860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -201,7 +203,7 @@
 			children = (
 				DD1C39C822374D880082E860 /* Main.storyboard */,
 				DD1C3A192239430D0082E860 /* ResultsViewController.xib */,
-				DD1C39C622374D880082E860 /* ViewController.swift */,
+				DD1C39C622374D880082E860 /* BaseViewController.swift */,
 				DD1C3A182239430D0082E860 /* ResultsViewController.swift */,
 				DD1C3A1E223954AE0082E860 /* CurvedButton.swift */,
 				DD0A0405223A02DE00166137 /* CustomTableViewCell.swift */,
@@ -274,6 +276,7 @@
 				DD1C39D922374D8B0082E860 /* FileReaderTests.swift */,
 				DD1C3A0C2238E9AF0082E860 /* GuestDataProviderTests.swift */,
 				DD1C39F622374F240082E860 /* DummyToGetBundle.swift */,
+				DD0A0411223A1C3400166137 /* VicinityCalculatorTests.swift */,
 			);
 			path = DistanceCalculatorTests;
 			sourceTree = "<group>";
@@ -547,7 +550,7 @@
 				DD1C3A09223893760082E860 /* HaversineDistanceCalculator.swift in Sources */,
 				DD0A0406223A02DE00166137 /* CustomTableViewCell.swift in Sources */,
 				DD1C39FA22377DB50082E860 /* FileReader.swift in Sources */,
-				DD1C39C722374D880082E860 /* ViewController.swift in Sources */,
+				DD1C39C722374D880082E860 /* BaseViewController.swift in Sources */,
 				DD1C3A0B223894130082E860 /* GuestDataProvider.swift in Sources */,
 				DD0A0404223A023700166137 /* Guest.swift in Sources */,
 				DD1C3A132238FC8C0082E860 /* VicinityCalculator.swift in Sources */,
@@ -566,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0A0412223A1C3400166137 /* VicinityCalculatorTests.swift in Sources */,
 				DD1C39F722374F250082E860 /* DummyToGetBundle.swift in Sources */,
 				DD1C3A0D2238E9AF0082E860 /* GuestDataProviderTests.swift in Sources */,
 				DD1C39DA22374D8B0082E860 /* FileReaderTests.swift in Sources */,

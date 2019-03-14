@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-class ViewController: UIViewController {
+class BaseViewController: UIViewController {
     
     @IBOutlet weak var loadDataButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
